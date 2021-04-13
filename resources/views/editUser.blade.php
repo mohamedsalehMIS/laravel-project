@@ -20,33 +20,33 @@
 
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" name="name" class="form-control" value="{{old('name')}}" placeholder="Enter Name">
+                <input type="text" name="name" class="form-control" value="{{$user_data->name}}" placeholder="Enter Name">
             </div>
 
             <div class="form-group">
                 <label>Age</label>
-                <input type="number" name="age" class="form-control" value="{{old('age')}}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="number" name="age" class="form-control" value="{{$user_data->age}}" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
 
             <div class="form-group">
                 <label>Phone</label>
-                <input type="number" name="phone" class="form-control" value="{{old('phone')}}"  placeholder="Password">
+                <input type="number" name="phone" class="form-control" value="{{$user_data->phone}}"  placeholder="Password">
             </div>
             <div class="form-group">
                 <label>National ID</label>
-                <input type="text" name="national_id" class="form-control" value="{{old('national_id')}}"  placeholder="Password">
+                <input type="text" name="national_id" class="form-control" value="{{$user_data->national_id}}"  placeholder="Password">
             </div>
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" class="form-control" value="{{old('password')}}"  placeholder="Password">
-            </div>
+                <input type="password" name="password" class="form-control" value="{{$user_data->password)}}"  placeholder="Password">
+            </div> --}}
             <div class="form-group">
                 <label>Address</label>
-                <input type="text" name="address" class="form-control" value="{{old('address')}}"  placeholder="Password">
+                <input type="text" name="address" class="form-control" value="{{$user_data->address}}"  placeholder="Password">
             </div>
             <div class="form-group">
                 <label>About me</label>
-                <textarea name="about" class="form-control" value="{{old('about')}}" rows="3"></textarea>
+                <textarea name="about" class="form-control" value="{{$user_data->about}}" rows="3"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

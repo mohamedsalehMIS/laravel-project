@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\registerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,5 +31,8 @@ Route::get('request', 'App\Http\Controllers\studentController@request');
 
 // Task form Registeration
 
-Route::get('registeration', 'App\Http\Controllers\registerController@createUser');
-Route::post('storeRegister', 'App\Http\Controllers\registerController@store');
+Route::get('registeration', 'registerController@createUser');
+Route::post('storeRegister', 'registerController@store');
+Route::get('displayUsers', 'registerController@display');
+Route::get('deleteUser/{id}', 'registerController@delete');
+Route::get('editUser/{id}', 'registerController@edit');

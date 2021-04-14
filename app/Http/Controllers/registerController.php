@@ -58,4 +58,27 @@ class registerController extends Controller
         return view('editUser', ['user_data' => $data, 'title' => 'edit user']);
     }
 
+
+    public function update(Request $request) {
+
+        $data = $this->validate(request(), [
+
+            'name'          => 'required|min:6|max:25|string',
+            'age'           => 'required|string|max:120',
+            'phone'         => 'required|digits:11',
+            'national_id'   => 'required|digits:14',
+            'address'       => 'required|string|max:30',
+            'about'         => 'string|nullable|max:50'
+        ]);
+
+        $op = users::where('id', $request->id)->update($data);
+
+        if($op) {
+            echo 'data inserted';
+        } else {
+            echo 'error in insert';
+        }
+        return redirect('displayUsers');
+    }
+
 }

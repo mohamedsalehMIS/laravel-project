@@ -36,3 +36,8 @@ Route::post('storeRegister', 'registerController@store');
 Route::get('displayUsers', 'registerController@display');
 Route::get('deleteUser/{id}', 'registerController@delete');
 Route::get('editUser/{id}', 'registerController@edit');
+Route::post('updateUser', 'registerController@update');
+
+
+// Route student Controller type of resource
+Route::resource('Student', 'studentController');

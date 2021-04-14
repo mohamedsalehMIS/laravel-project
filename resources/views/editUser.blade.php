@@ -14,10 +14,10 @@
 
     <div class="container col-lg-6 ps-5">
         <h2>Form Registeration</h2>
-        <form action="{{url('storeRegister')}}" method="post" enctype="multipart/form-data">
+        <form action="{{url('updateUser')}}" method="post" enctype="multipart/form-data">
 
             @csrf
-
+            <input type="hidden" name="id" value="{{$user_data->id}}">
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" name="name" class="form-control" value="{{$user_data->name}}" placeholder="Enter Name">
